@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RichNuts </title>
+    <script src="https://kit.fontawesome.com/ba87e0a43c.js" crossorigin="anonymous"></script>
+</head>
+<style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 75px;
+    font-family: none;
+}
+
+nav .list{
+    display: flex;
+    padding: 20px 20px;
+    
+}
+
+.list > li {
+    list-style: none;
+    margin-left: 40px;
+    font-size: 25px; 
+}
+
+.list li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.list li a:hover{
+    text-decoration: none;
+    color: gold ;
+    font-weight: bold;
+    border-bottom: 2px solid gold;
+    border-top: 2px solid gold;
+    transition: all 1.3s ease;
+
+   
+}
+
+
+
+nav .img {
+    padding: 10px 20px ;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gold;
+    /* text-shadow: 5px 5px 5px black; */
+}
+
+.img > img {
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+}
+
+
+
+
+
+
+
+
+.menu{
+
+display: none;
+flex-direction: column;
+justify-content: center;
+align-items: end;
+padding: 30px 20px;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+height: 250px;
+margin-top: 50px;
+position: fixed;
+
+} 
+
+#menubar{
+    display: none;
+}
+
+#xmark{
+    display: none;
+}
+
+
+
+
+
+
+
+.contact-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    margin-top: 70px;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+   
+}
+
+/* Contact Us Section Styles */
+.contact-us {
+    padding-top: 80px; /* Account for fixed navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Full viewport height minus navbar */
+    /* background-color: #fff; */
+    background-image: url("images/wallpaperflare.com_wallpaper\ \(8\).jpg");
+ 
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    /* background-color: #fff; */
+    /* background-image:linear-gradient(rgba(0,0,0,0.5px)), url("./images/contact.jpg"); */
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+   
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.contact-form .form-group input:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+.contact-form .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #e67e22;
+}
+
+
+
+
+
+#contact{
+
+height: 400px;
+width: 100%;
+background-color: #000;
+display: flex;
+justify-content: start;
+align-items: center;
+flex-direction: column;
+color: #ddd;
+gap: 50px;
+padding: 30px 10px;
+border-bottom: 1px solid white;
+
+}
+
+#contact > h1{
+font-size: 40px;
+}
+
+
+
+.text{
+color: white;
+margin-top: 10px;
+font-size: 30px;
+text-decoration: underline;
+
+}
+
+
+#contact > .img{
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: white;
+}
+
+.img > .i1 > a i{
+font-size: 50px;
+
+}
+
+
+.i1 > a{
+font-size: 30px;
+text-decoration: none;
+color: #fff; 
+}
+
+.img > .i1>a:hover{
+
+color: red;
+cursor: pointer;
+transition: all 1s ease;
+}
+
+
+.img > .i2 > a i{
+font-size: 50px;
+
+}
+
+.i2 > a{
+font-size: 30px;
+text-decoration: none;
+color: #fff;
+
+}
+.img > .i2> a:hover{
+ cursor: pointer;
+ color: blue ;
+ transition: all 1s ease;
+ 
+}
+
+.img > .i3 > a i{
+font-size: 50px;
+
+}
+
+.i3 > a{
+font-size: 30px;
+text-decoration: none;
+color: #fff;
+}
+
+
+.img > .i3>a:hover{
+ cursor: pointer;
+ color: green;
+ transition: all 1s ease; 
+}
+
+#contact > .img > img{
+
+width: 150px ; 
+height: 150px;
+border-radius: 50%;
+
+}
+
+.copyright{
+    height: 50px;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: white;
+    
+}
+
+
+
+
+.copyright > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    /* ----------------------- Navigation ----------------------- */
+    
+ 
+  nav {
+       
+        height: 50px;
+        padding: 10px 20px;
+    }
+
+
+#menubar{
+    
+    display: block;
+    color: white;
+    font-size: 20px;  
+    
+}
+
+
+
+
+#xmark{
+    display: none;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+.menu {
+    display: none;
+
+}
+
+
+
+
+nav > .list {
+    display: none;
+}
+
+
+
+
+
+ .menu > .list2 {
+       
+       width: 100%;
+       
+      text-align: center;
+      
+        
+    }
+
+    .list2 > li {
+        margin-left: 10px;
+        list-style: none;
+       font-size: 15px;
+       margin-bottom: 20px;
+    }
+
+    .list2 li a {
+        font-size: 20px;
+       
+        text-decoration: none;
+        color: white;
+    }
+
+    nav > .img{
+        flex-direction: row;
+        gap: 10px;
+        
+    }
+
+    .img > h1{
+        font-size: 30px;
+    }
+
+
+    .img > img {
+        width: 40px;
+        height: 40px;
+    } 
+
+
+    .contact-us{
+        margin-top: 0;
+    }
+
+
+
+    #contact {
+        height: auto;
+        padding: 10px 10px;
+        gap: 30px;
+    }
+
+    #contact > h1 {
+        font-size: 20px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .img {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .img > .i1, .img > .i2, .img > .i3 {
+        margin-bottom: 20px;
+    }
+
+    .img > .i1 > a i,
+    .img > .i2 > a i,
+    .img > .i3 > a i {
+        font-size: 30px;
+    }
+
+    .img > .i1 > a,
+    .img > .i2 > a,
+    .img > .i3 > a {
+        font-size: 25px;
+    }
+
+    #contact > .img > img {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .copyright {
+        flex-direction: column;
+        font-size: 13px;
+        gap: 5px;
+    }
+
+    .copyright > h3{
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+
+    <nav>
+
+        <div class="img"><img src="./logo1.webp" alt="" > <h1>RichNuts</h1></div>
+        <div class="list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+       
+        
+        </div>
+        
+        <i class="fa-solid fa-bars" id="menubar"></i>
+
+        
+        </nav>
+
+       
+<div class="menu" id="menu">
+
+    <div class="list2" id="list2">
+        <li><a href="./index.html" class="close">Home</a></li>
+        <li><a href="./about.html" class="close">About us</a></li>
+        <li><a href="./products.html" class="close">Products</a></li>
+        <li><a href="./contact.html" class="close">Contact</a></li>
+        <li><i class="fa-solid fa-xmark" id="xmark"></i></li>
+        </div>
+
+
+       </div>   
+
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <h2>Send us your questions !</h2>
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name"  placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email"  placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone"  placeholder="Enter your phone number" required>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit">Submit</button>
+                <h2 id="response"></h2>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+<div class="contact" id="contact">
+
+    <div class="text">
+<h2> Connect with Us </h2>
+
+</div>
+
+
+<div class="img">
+<img src="./logo1.webp" alt=""  >
+
+<div class="i1">
+<a href="https://www.youtube.com/@AjfanGroup"><i class="fa-brands fa-square-youtube"> </i>  www.youtube.com</a>
+
+</div>
+<div class="i2">
+   <a href="mailto:ranjithkumaroffline@gmail.com"> <i class="fa-solid fa-square-envelope"> </i>  richnuts@gmail.com</a></div>
+<div class="i3">
+<a href="https://wa.me/919361388261"><i class="fa-brands fa-square-whatsapp"></i>  www.whatsapp.com</a></div>
+
+</div>
+
+<h1> GROW TOGETHER !!!</h1>
+
+
+
+</div>
+
+
+
+<div class="copyright">
+
+    <p> © 2024, RichNuts & Dates. All Rights Reserved </p>
+    <h3>||</h3>
+    <p>  For any query : <a href="mailto:ranjithkumaroffline@gmail.com">@richnuts@gmail.com</a>  </p>
+    
+    </div>
+
+
+
+
+
+
+
+<script>
+    
+    const menu = document.getElementById('menubar');
+    const navList = document.getElementById('menu');
+    const closing = document.getElementsByClassName('close');
+const xmark=document.getElementById("xmark")
+
+
+
+   
+
+    menu.onclick=function(){
+
+navList.style.display='block';
+xmark.style.display='block'
+
+    }
+    
+closing.onclick=function(){
+    navList.style.display='none';
+}
+
+
+xmark.onclick=function(){
+    navList.style.display='none'; 
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+        
+
+
+
+
+    
+</body>
+</html>

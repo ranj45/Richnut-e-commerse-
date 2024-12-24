@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-RichNuts</title>
+    <script src="https://kit.fontawesome.com/ba87e0a43c.js" crossorigin="anonymous"></script>
+</head>
+
+
+<style>
+
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0,0.7);
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 75px;
+}
+
+nav .list{
+    display: flex;
+    padding: 20px 20px;
+    
+}
+
+.list > li {
+    list-style: none;
+    margin-left: 40px;
+    font-size: 25px; 
+}
+
+.list li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.list li a:hover{
+    text-decoration: none;
+    color: gold ;
+    font-weight: bold;
+    border-bottom: 2px solid gold;
+    border-top: 2px solid gold;
+    transition: all 1.3s ease;
+
+   
+}
+
+
+
+nav .img {
+    padding: 10px 20px ;
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 30px;
+    color: gold;
+    
+}
+
+.img > img {
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+}
+
+
+
+.menu{
+
+display: none;
+flex-direction: column;
+justify-content: center;
+align-items: end;
+padding: 30px 20px;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+height: 250px;
+margin-top: 50px;
+position: fixed;
+
+} 
+
+#menubar{
+    display: none;
+}
+
+#xmark{
+    display: none;
+}
+
+
+
+/* ------------------------------------------------------------- */
+.about{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgb(0,0,0,0.8),rgb(0,0,0,0.8)),url("./images/nuttiest2.jpg");
+    color: white;
+    border-bottom: 10px solid white;
+
+}
+
+
+.about > .top{
+  
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+
+.about > .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    gap: 50px;
+}
+
+
+.bottom > .left{
+   
+    padding: 50px 10px;
+    
+    margin-left: 50px;
+}
+
+.left > img{
+    height: 430px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 20%;
+    
+}
+
+.bottom > .right{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 10px;
+  
+    width: 50%;
+  
+}
+
+.right> p{
+    font-size: 20px;
+}
+
+
+.about2{
+    height: 700px;
+    width: 100%;
+    flex-basis: 50%;
+    /* background-color: black; */
+    /* color: white; */
+    border-bottom: 10px solid white;
+    margin-top: 50px;
+   
+}
+
+.about2>.left2{
+    /* background-color: aqua; */
+    height: 50%;
+    width: 100%;
+    display: flex;
+    border-top: 2px solid black;
+}
+
+
+.left2 > img{
+    height: 100%;
+    width: 50%;
+}
+
+.about2>.right2{
+    /* background-color: green; */
+    height: 50%;
+    width: 100%;display: flex;
+    border-bottom: 2px solid black;
+}
+
+.para{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 50px;
+    font-size: 20px;
+    
+}
+
+.right2 > img{
+    height: 100%;
+    width: 50%;
+}
+.watch{
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.watch > h1{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#view-all{
+    padding: 7px 25px;
+    background-color: white;
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#view-all:hover{
+    background-color: gold;
+    transition: all 1s ease;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    /* ----------------------- Navigation ----------------------- */
+    
+ 
+
+    
+     nav {
+       
+        height: 50px;
+        padding: 10px 20px;
+    }
+
+
+#menubar{
+    
+    display: block;
+    color: white;
+    font-size: 20px;  
+    
+}
+
+
+
+
+#xmark{
+    display: none;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+.menu {
+    display: none;
+
+}
+
+
+
+
+nav > .list {
+    display: none;
+}
+
+
+
+
+
+ .menu > .list2 {
+       
+       width: 100%;
+       
+      text-align: center;
+      
+        
+    }
+
+    .list2 > li {
+        margin-left: 10px;
+        list-style: none;
+       font-size: 15px;
+       margin-bottom: 20px;
+    }
+
+    .list2 li a {
+        font-size: 20px;
+       
+        text-decoration: none;
+        color: white;
+    }
+
+    nav > .img{
+        flex-direction: row;
+        gap: 10px;
+       
+        
+    }
+
+    .img > h1{
+        font-size: 30px;
+    }
+
+
+    nav >.img > img {
+        width: 40px;
+        height: 40px;
+       
+    } 
+
+/* --------------- aboutus -------------- */
+
+
+.about{
+    gap: 20px;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+   
+}
+
+.about > .top{
+
+font-size: 20px;
+color: white;
+text-shadow: 2px 2px 2px black;
+    
+}
+
+.about > .bottom{
+    flex-direction: column;
+    gap: 0;
+   
+}
+
+.bottom > .left {
+    padding: 10px 10px;
+    margin-left: 0%;
+}
+
+.left > img {
+    height: 200px;
+    width: 200px;
+    
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.bottom > .right {
+    gap: 10px;
+    padding: 10px 25px;
+    width: 100%;
+}
+
+.right > h1,p {
+    font-size: 20px;
+}
+
+
+.about2{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.about2 .left2 {
+
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.about2 > .left2 > img {
+   width: 100%;
+}
+
+.left2 > .para{
+    width: 100%;
+    padding-inline: 30px;
+    margin-bottom: 20px;
+    
+    
+}
+
+.para > h1{
+    font-size: 30px;
+}
+
+
+
+
+.about2 .right2 {
+
+flex-direction: column-reverse;
+gap: 10px;
+border-bottom: none;
+
+
+}
+
+.about2 > .right2 > img {
+ width: 100%;
+ 
+}
+
+.right2 > .para{
+  width: 100%;
+  
+}
+
+.para > h1{
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+
+.watch{
+    border-top: 2px solid black;
+}
+
+}
+
+
+
+
+
+
+
+</style>
+<body>
+    <nav>
+
+<div class="img"><img src="./logo1.webp" alt="" > <h1>RichNuts</h1></div>
+<div class="list">
+<li><a href="./index.html">Home</a></li>
+<li><a href="./about.html">About us</a></li>
+<li><a href="./products.html">Products</a></li>
+<li><a href="./contact.html">Contact</a></li>
+</div>
+<i class="fa-solid fa-bars" id="menubar"></i>
+
+
+</nav>
+
+
+<div class="menu" id="menu">
+
+    <div class="list2" id="list2">
+        <li><a href="./index.html" class="close">Home</a></li>
+        <li><a href="./about.html" class="close">About us</a></li>
+        <li><a href="./products.html" class="close">Products</a></li>
+        <li><a href="./contact.html" class="close">Contact</a></li>
+        <li><i class="fa-solid fa-xmark" id="xmark"></i></li>
+        </div>
+
+
+</div>
+
+
+
+<div class="about">
+<div class="top">
+    
+
+<h1>About Us</h1>
+
+
+</div>
+
+<div class="bottom">
+
+
+<div class="left">
+<img src="./images/chairman.png" alt="">
+<h2>Mr.RichMan</h2>
+<h3>Chairman of RichNuts</h3>
+</div>
+
+<div class="right">
+
+    <h1>Our vision</h1>
+<p>To become the first choice of customer for dates, dry fruits, nuts and other precious items in fruits and vegetables along with imported 
+    drinks and wines by bringing the freshest and highest quality to maximum number of customers through our own shops across India. Our priority
+     lies with consistently keeping up our customers by serving them the products without compromising the level of quality.</p>
+
+
+     <h1>Our mission</h1>
+     <p>We endeavour to achieve our vision by following international standards of quality, right from selection till after sales service. 
+        For that we have our own dates farm in the Middle East and we cultivate and sale pure organic dates in 40 + varieties. On the other 
+        hand we import fine quality Nuts, dry fruits, exotic fruits, vegetables and drinks from the source from which they are available at 
+        their best.</p>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="about2">
+
+
+<div class="left2">
+   <img src="./images/nuttiest1.jpg" alt="">
+
+<div class="para">
+
+     <h1>NUTTIEST PEOPLE AROUND</h1>
+    <br>
+    <p>Varieties of dates, nuts and dry fruits from countries like Iran, Afghanistan, 
+        United States of America and Dubai. The best dates that grow in Saudi Arabia are offered to our customers 
+        in India.The hand-picked dates are hygienically processed to ensure the best quality. Our exclusive farm 
+        fresh yellow dates are a catch for the season!</p>
+       </div>
+</div>
+<div class="right2">
+    <div class="para">
+    <h1>NUTTIEST PEOPLE AROUND</h1><br>
+    <P>At RichNuts, we respect and connect with Mother Nature and earth and we do not do anything that does not go in sync with nature. 
+        Hence, dry fruits that we grow at our farm are free of pesticides or insecticides. The cultivation measures that we have been
+         using are purely organic. There is minimal use of machines and we prefer using hands for our cultivations. We ensure that each
+          pack of our dry fruits are hygienic and do not contain any preservative. Keeping nature intact and saving the environment is our
+           way of giving back what Mother Nature has given us!</P></div>
+
+           <img src="./images/aboutusbg.jpg" alt="">
+
+</div>
+</div>
+
+
+<div class="watch">
+
+<h1>Watch our Story...</h1>
+<iframe width="100%" height="514" src="https://www.youtube.com/embed/4jlUgZP2aQg" title="The world of Ajfan" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<a href="./products.html" > <button id="view-all"> Place Your order now    <i class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+
+
+
+
+<script>
+    
+    const menu = document.getElementById('menubar');
+    const navList = document.getElementById('menu');
+    const closing = document.getElementsByClassName('close');
+const xmark=document.getElementById("xmark")
+
+
+
+   
+
+    menu.onclick=function(){
+
+navList.style.display='block';
+xmark.style.display='block'
+
+    }
+    
+closing.onclick=function(){
+    navList.style.display='none';
+}
+
+
+xmark.onclick=function(){
+    navList.style.display='none'; 
+}
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

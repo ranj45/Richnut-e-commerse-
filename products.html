@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products of RichNuts</title>
+    <script src="https://kit.fontawesome.com/ba87e0a43c.js" crossorigin="anonymous"></script>
+
+    
+</head>
+
+
+
+<style>
+
+    
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: fixed;
+     width: 100%;
+    height: 75px;
+    top: 0%;
+}
+
+nav .list{
+    display: flex;
+    padding: 20px 20px;
+    
+}
+
+.list > li {
+    list-style: none;
+    margin-left: 40px;
+    font-size: 25px; 
+}
+
+.list li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.list li a:hover{
+    text-decoration: none;
+    color: gold ;
+    font-weight: bold;
+    border-bottom: 2px solid gold;
+    border-top: 2px solid gold;
+    transition: all 1.3s ease;
+
+   
+}
+
+
+
+nav .img {
+    padding: 10px 20px ;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gold;
+    
+}
+
+.img > img {
+    border-radius: 30px;
+     height: 60px;
+     width: 60px;
+}
+
+
+
+.menu{
+
+display: none;
+flex-direction: column;
+justify-content: center;
+align-items: end;
+padding: 30px 20px;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+height: 250px;
+margin-top: 50px;
+position: fixed;
+
+} 
+
+#menubar{
+    display: none;
+}
+
+#xmark{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+.skills-section {
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    width: 100%;
+    height: 100%;
+ 
+    flex: 1;
+    text-align: center; 
+    border-bottom: 2px solid black;
+}
+
+.skills-section h1 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: navy;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skills-grid {
+      display: flex;
+   flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+   width: 100%;
+   gap: 30px;
+   text-align: start;
+}
+
+.skills-grid > h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: red;
+    text-shadow: 2px 0px 2px black;
+    margin-left: 100px;
+    /* text-decoration: underline; */
+    
+    
+}
+
+.skills-grid > .top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.skills-grid > .bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skill-item {
+    text-align: center;
+    /* width: 100px; */
+}
+
+.skill-item2 {
+    text-align: center;
+    /* width: 100px; */
+}
+
+.skill-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.skill-item>img:hover{
+box-shadow: 2px 2px 10px 5px black;
+transition: all 0.5s ease;
+}
+
+.skill-item2>img:hover{
+box-shadow: 2px 2px 10px 5px black;
+transition: all 0.5s ease;
+/* transform: scale(1.1); */
+}
+
+
+
+
+.skill-item2 img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+   
+}
+
+.skill-item > h3{
+    color: navy;
+    font-size: 1.2rem;
+}
+
+.skill-item2 h3 {
+    font-size: 1.2rem;
+    color: navy;
+}
+
+.skill-item,.skill-item2 p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+
+#products{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin-top: 60px;
+    
+
+}
+
+#view-all{
+    padding: 3px 10px;
+    background-color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    /* font-weight: bold; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#view-all:hover{
+    background-color: gold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+    /* ----------------------- Navigation ----------------------- */
+    
+ 
+
+    
+     nav {
+       
+        height: 50px;
+        padding: 10px 20px;
+    }
+
+
+#menubar{
+    
+    display: block;
+    color: white;
+    font-size: 20px;  
+    
+}
+
+
+
+
+#xmark{
+    display: none;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+.menu {
+    display: none;
+    margin-top: 0%;
+
+}
+
+
+
+
+nav > .list {
+    display: none;
+}
+
+
+
+
+
+ .menu > .list2 {
+       
+       width: 100%;
+       
+      text-align: center;
+      
+        
+    }
+
+    .list2 > li {
+        margin-left: 10px;
+        list-style: none;
+       font-size: 15px;
+       margin-bottom: 20px;
+    }
+
+    .list2 li a {
+        font-size: 20px;
+       
+        text-decoration: none;
+        color: white;
+    }
+
+    nav > .img{
+        flex-direction: row;
+        gap: 10px;
+        
+    }
+
+    .img > h1{
+        font-size: 30px;
+    }
+
+
+    .img > img {
+        width: 40px;
+        height: 40px;
+    } 
+
+
+
+/* @media (max-width: 768px) { */
+    
+    .skills-section {
+        padding: 20px;
+        height: auto; 
+    }
+
+    
+    .skills-section h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+   
+    .skills-grid > h2 {
+        font-size: 28px; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+ 
+    .skills-grid {
+        flex-direction: column;
+        gap: 15px; 
+    }
+
+  
+    .skill-item img,
+    .skill-item2 img {
+        width: 120px;
+        height: 120px;
+    }
+
+    
+    .skills-grid > .top, 
+    .skills-grid > .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    .skill-item h3,
+    .skill-item2 h3 {
+        font-size: 1rem;
+    }
+
+   
+    #view-all button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+   
+    #products {
+        margin-top: 40px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+
+
+    <nav>
+
+        <div class="img"><img src="./logo1.webp" alt="" > <h1>RichNuts</h1></div>
+        <div class="list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <!-- <li><a href="">Review</a></li> -->
+        <li><a href="./contact.html">Contact</a></li>
+        
+        </div>
+
+        <i class="fa-solid fa-bars" id="menubar"></i>
+        
+        </nav>
+
+
+
+        <div class="menu" id="menu">
+
+            <div class="list2" id="list2">
+                <li><a href="./index.html" class="close">Home</a></li>
+                <li><a href="./about.html" class="close">About us</a></li>
+                <li><a href="./products.html" class="close">Products</a></li>
+                <li><a href="./contact.html" class="close">Contact</a></li>
+                <li><i class="fa-solid fa-xmark" id="xmark"></i></li>
+                </div>
+        
+        
+        </div>
+
+
+
+
+
+        
+<div class="products" id="products">
+
+
+ 
+ 
+    
+       
+    <div class="skills-section">
+        <h1>All Products</h1>
+        <div class="skills-grid">
+
+            <h2>RichNuts Delicacies</h2>
+            <!-- Top 5 prods -->
+             <div class="top">
+            <div class="skill-item">
+                <img src="./images/p1.avif" alt="HTML">
+                <p> medjoul jordan premium dates</p>
+                <h3>From Rs.475.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item">
+                <img src="./images/p2.avif" alt="CSS">
+                <p>super premium figs afghan anjeer</p>
+                <h3>From Rs.470.00 </h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item">
+                <img src="./images/p3.avif" alt="Java">
+                <p>chile walnut without shell </p>
+                <h3>From Rs.548.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item">
+                <img src="./images/badam.png" alt="SQL">
+                <p>premium mamra almonds
+                </p>
+                <h3>From Rs.248.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div> </div>
+            <!-- Bottom 5 Skills -->
+             <div class="bottom">
+            <div class="skill-item2">
+                <img src="images/p4.png" alt="JavaScript">
+                <p>Premium iranian pistachio No 1</p>
+               <h3> From Rs.470.00</h3>
+               <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+           
+            <div class="skill-item2">
+                <img src="./images/p6.png" alt="React">
+                <p>ajwa dates jumbo size
+                </p>
+                <h3>From Rs.525.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item2">
+                <img src="./images/p7.png" alt="Node.js">
+                <p>cashew nut plain w 180</p>
+                <h3>From Rs.200.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item2">
+                <img src="./images/p8.png" alt="Python">
+                <p>Premium jumbo brazil nuts</p>
+                <h3>From Rs.379.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- <button id="view-all">View All    <i class="fa-solid fa-arrow-right"></i></button> -->
+
+    </div>
+
+
+         
+    <div class="skills-section">
+        
+        <div class="skills-grid">
+
+            <h2 style="margin-top: 20px;">FEATURED COLLECTION </h2>
+            <!-- Top 5 prods -->
+             <div class="top">
+            <div class="skill-item">
+                <img src="./images/FC1.PNG" alt="HTML">
+                <p> RichNuts summer mix</p>
+                <h3>From Rs.475.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item">
+                <img src="./images/FC2.PNG" alt="CSS">
+                <p>RichNuts protein mix</p>
+                <h3>From Rs.470.00 </h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item">
+                <img src="./images/fc3.png" alt="Java">
+                <p>RichNuts power mix</p>
+                <h3>From Rs.548.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item">
+                <img src="./images/fc4.png" alt="SQL">
+                <p>RichNuts Classic seed mix </p>
+                <h3>From Rs.248.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div> </div>
+            <!-- Bottom 5 Skills -->
+             <div class="bottom">
+            <div class="skill-item2">
+                <img src="images/fc5.png" alt="JavaScript">
+                <p>Mixed dry fruits</p>
+               <h3> From Rs.470.00</h3>
+               <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+           
+            <div class="skill-item2">
+                <img src="./images/fc6.png" alt="React">
+                <p> Masala coated</p>
+                <h3>From Rs.525.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item2">
+                <img src="./images/fc7.png" alt="Node.js">
+                <p> Honey coated</p>
+                <h3>From Rs.200.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="skill-item2">
+                <img src="./images/fc8.png" alt="Python">
+                <p>Dried strawberries</p>
+                <h3>From Rs.379.00</h3>
+                <button id="view-all">Order Now   <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- <button id="view-all">View All    <i class="fa-solid fa-arrow-right"></i></button> -->
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+    
+    const menu = document.getElementById('menubar');
+    const navList = document.getElementById('menu');
+    const closing = document.getElementsByClassName('close');
+const xmark=document.getElementById("xmark")
+
+
+
+   
+
+    menu.onclick=function(){
+
+navList.style.display='block';
+xmark.style.display='block'
+
+    }
+    
+closing.onclick=function(){
+    navList.style.display='none';
+}
+
+
+xmark.onclick=function(){
+    navList.style.display='none'; 
+}
+
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>
